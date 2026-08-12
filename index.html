@@ -1,284 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Nithin Kumar S — Digital Marketing & Growth</title>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Primary SEO -->
+    <title>Nithin Kumar | Digital Marketing Specialist</title>
+    <meta name="description" content="Nithin Kumar — Digital Marketing Specialist with 4+ years of experience in multi-channel campaigns, SEO, paid advertising, content creation, and analytics. Based in Dubai, UAE." />
+    <meta name="keywords" content="Nithin Kumar, Digital Marketing Specialist, SEO, Google Ads, Social Media Marketing, Dubai, UAE, Content Marketing, PPC" />
+    <meta name="author" content="Nithin Kumar" />
+    <meta name="robots" content="index, follow" />
 
-  <!-- AOS (optional extra reveal) -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nithin Kumar | Digital Marketing Specialist" />
+    <meta property="og:description" content="Digital Marketing Specialist with 4+ years of experience. Expert in multi-channel campaigns, SEO, paid advertising, and creative content." />
+    <meta property="og:url" content="https://nithinkumar.vercel.app" />
+    <meta property="og:image" content="/og-image.png" />
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nithin Kumar | Digital Marketing Specialist" />
+    <meta name="twitter:description" content="4+ years in digital marketing. Expert in campaigns, SEO, analytics & creative content." />
 
+    <!-- Canonical -->
+    <link rel="canonical" href="https://nithinkumar.vercel.app" />
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- GSAP + ScrollTrigger -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-
-  <!-- AOS JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
-
-  <!-- Main JS -->
-  <script src="script.js" defer></script>
-</head>
-<body class="dark-mode">
-
-  <!-- Header -->
-  <header id="header" class="site-header">
-    <div class="wrap">
-      <h1 class="logo">Nithin <span>Kumar </span>S</h1>
-      <nav class="main-nav">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="header-controls">
-        <button id="mode-toggle" aria-label="Toggle color mode">☀️</button>
-        <button id="menu-toggle" class="mobile-only" aria-label="Open menu">☰</button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Mobile nav overlay -->
-  <div id="mobile-nav" class="mobile-nav">
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <button id="mobile-close">Close</button>
-  </div>
-
-  <!-- HERO - full-screen video background -->
-  <section id="hero" class="hero-section">
-    <!-- Layered parallax shapes (SVG or pseudo) -->
-    <div class="parallax-layer layer-back"></div>
-
-    <!-- Video background -->
-    <!-- Hero Section Video -->
-     <video class="hero-video" autoplay muted loop playsinline poster="assets/hero-fallback.jpg">
-      <source src="assets/hero-bg.webm" type="video/webm">
-      <source src="assets/hero-bg.mp4" type="video/mp4">
-      <img src="assets/hero-fallback.jpg" alt="Hero background image" />
-    </video>
-
-
-    <div class="hero-inner wrap">
-      <div class="hero-content">
-        <h2 class="eyebrow">Creative Growth & Performance</h2>
-        <h1 class="hero-title">I’m <span>Nithin Kumar S</span> — Digital Marketer & Growth Strategist</h1>
-        <p class="hero-sub">I blend data, creative storytelling and paid acquisition to scale brands — 8+ years of measurable ROI.</p>
-
-        <div class="hero-ctas">
-          <a class="btn primary" href="#projects">See Work</a>
-          <a class="btn ghost" href="#contact">Let’s Talk</a>
-        </div>
-
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-num" data-target="8">0</span>
-            <span class="stat-label">Years</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num" data-target="120">0</span>
-            <span class="stat-label">Campaigns</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num" data-target="95">0</span>
-            <span class="stat-label">Clients</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- subtle animated hero accent -->
-      <div class="hero-accent" aria-hidden="true"></div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="section about-section" data-aos="fade-up">
-    <div class="wrap">
-      <div class="about-grid">
-        <div class="about-text">
-          <h2>About Me</h2>
-          <p>I'm a performance-focused digital marketer specializing in paid social, search, content and growth systems. I design campaigns that scale CAC-efficient acquisition and build sustainable revenue engines.</p>
-          <ul class="about-list">
-            <li>Strategy & media planning</li>
-            <li>Paid social & search</li>
-            <li>Creative direction & A/B testing</li>
-            <li>Analytics & growth ops</li>
-          </ul>
-
-          <a class="btn primary" href="#contact">Hire Me</a>
-        </div>
-
-        <div class="about-media">
-          <!-- small background video / animated showcase -->
-           <!-- Hero Section Video -->
-            <video class="hero-video" autoplay muted loop playsinline poster="assets/hero-fallback.jpg">
-              <source src="assets/hero-bg.webm" type="video/webm">
-              <source src="assets/hero-bg.mp4" type="video/mp4">
-              <img src="assets/hero-fallback.jpg" alt="Hero background image" />
-            </video>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="section skills-section" data-aos="fade-right">
-    <div class="wrap">
-      <h2>Skills & Expertise</h2>
-      <div class="skills-grid">
-        <div class="skill">Paid Social <small>Meta / TikTok / Snap</small></div>
-        <div class="skill">Search Ads <small>Google Ads</small></div>
-        <div class="skill">SEO & Content <small>Organic Growth</small></div>
-        <div class="skill">Analytics <small>GA4 / Looker</small></div>
-        <div class="skill">Automation <small>Zapier / HubSpot</small></div>
-        <div class="skill">Creative Ops <small>Motion / Ads</small></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS (with hover video previews) -->
-  <section id="projects" class="section projects-section" data-aos="fade-left">
-    <div class="wrap">
-      <h2>Featured Projects</h2>
-      <div class="projects-grid">
-        <!-- PROJECT CARD 1 -->
-        <article class="project-card" data-aos="zoom-in">
-          <div class="project-media">
-            <!-- Hero Section Video -->
-             <video class="hero-video" autoplay muted loop playsinline poster="assets/hero-fallback.jpg">
-              <source src="assets/hero-bg.webm" type="video/webm">
-              <source src="assets/hero-bg.mp4" type="video/mp4">
-              <img src="assets/hero-fallback.jpg" alt="Hero background image" />
-            </video>
-
-            <img class="proj-fallback" src="https://via.placeholder.com/600x400?text=Project+1" alt="Project 1">
-          </div>
-          <div class="project-body">
-            <h3>Performance Launch — DTC Brand</h3>
-            <p>Full-funnel acquisition program; CRO; creatives; 3x ROAS in 90 days.</p>
-            <div class="project-meta">
-              <span>Channels: Meta, Google</span>
-              <span>Role: Lead Strategist</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT CARD 2 -->
-        <article class="project-card" data-aos="zoom-in" data-aos-delay="100">
-          <div class="project-media">
-            <video class="proj-video" muted loop playsinline poster="https://via.placeholder.com/600x400?text=Project+2">
-              <source src="https://assets.mixkit.co/videos/preview/mixkit-product-promo-1835-large.mp4" type="video/mp4">
-            </video>
-            <img class="proj-fallback" src="https://via.placeholder.com/600x400?text=Project+2" alt="Project 2">
-          </div>
-          <div class="project-body">
-            <h3>Lead Gen Scale — B2B SaaS</h3>
-            <p>Lead-gen funnel optimization; CPL down 42% via creative & targeting tests.</p>
-            <div class="project-meta">
-              <span>Channels: LinkedIn, Search</span>
-              <span>Role: Media Buyer</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT CARD 3 -->
-        <article class="project-card" data-aos="zoom-in" data-aos-delay="200">
-          <div class="project-media">
-            <video class="proj-video" muted loop playsinline poster="https://via.placeholder.com/600x400?text=Project+3">
-              <source src="https://assets.mixkit.co/videos/preview/mixkit-luxury-fashion-ad-3508-large.mp4" type="video/mp4">
-            </video>
-            <img class="proj-fallback" src="https://via.placeholder.com/600x400?text=Project+3" alt="Project 3">
-          </div>
-          <div class="project-body">
-            <h3>Creative Pivot — Retail</h3>
-            <p>Creative strategy + UGC playbook leading to 58% lower CPA and higher LTV.</p>
-            <div class="project-meta">
-              <span>Channels: TikTok, YouTube</span>
-              <span>Role: Creative Lead</span>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section id="testimonials" class="section testimonials-section" data-aos="fade-up">
-    <div class="wrap">
-      <h2>What Clients Say</h2>
-      <div class="testimonials">
-        <button class="ts-nav prev" aria-label="Previous">‹</button>
-
-        <div class="ts-track">
-          <blockquote class="ts-item active">
-            <p>“John doubled our month-on-month signups while decreasing CAC — a true growth partner.”</p>
-            <cite>— Sarah Williams, CEO BrandBoost</cite>
-          </blockquote>
-
-          <blockquote class="ts-item">
-            <p>“Fast, tactical and creative. Our paid social performance improved across the board.”</p>
-            <cite>— Alex Turner, Founder GrowthLab</cite>
-          </blockquote>
-
-          <blockquote class="ts-item">
-            <p>“He transformed our acquisition strategy into a reliable revenue engine.”</p>
-            <cite>— Priya Sharma, CMO MarketEdge</cite>
-          </blockquote>
-        </div>
-
-        <button class="ts-nav next" aria-label="Next">›</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section contact-section" data-aos="zoom-in">
-    <div class="wrap">
-      <h2>Let's build something that scales</h2>
-      <form id="contact-form" class="contact-form">
-        <div class="form-row">
-          <input type="text" name="name" placeholder="Your name" required>
-          <input type="email" name="email" placeholder="Email" required>
-        </div>
-        <input type="text" name="company" placeholder="Company / website (optional)">
-        <textarea name="message" placeholder="Tell me about your project..." rows="6" required></textarea>
-        <div class="form-actions">
-          <button class="btn primary" type="submit">Send Message</button>
-          <button class="btn ghost" type="button" id="download-resume">Download Resume</button>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="wrap">
-      <div class="foot-grid">
-        <p>© <span id="year"></span> John Doe — Digital Marketing</p>
-        <nav class="foot-links">
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-          <a href="#">LinkedIn</a>
-        </nav>
-      </div>
-    </div>
-  </footer>
-
-</body>
+    <!-- Preconnect for fonts (loaded in CSS) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

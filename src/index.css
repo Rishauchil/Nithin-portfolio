@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ===========================
+   DESIGN TOKENS
+=========================== */
+:root {
+  --bg-deep: #040d21;
+  --bg-section: #070f2b;
+  --bg-card: #0b1535;
+  --bg-card-hover: #0f1c45;
+  --accent: #e8192c;
+  --accent-dim: rgba(232, 25, 44, 0.15);
+  --accent-glow: rgba(232, 25, 44, 0.4);
+  --blue-glow: rgba(30, 60, 180, 0.4);
+  --text-primary: #ffffff;
+  --text-secondary: #b0bcda;
+  --text-muted: #6b7ca4;
+  --border: rgba(255, 255, 255, 0.07);
+  --border-accent: rgba(232, 25, 44, 0.3);
+  --font: 'Inter', sans-serif;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  --shadow-card: 0 12px 40px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 40px rgba(232, 25, 44, 0.25);
+  
+  /* Glassmorphism Design Tokens */
+  --glass-bg: rgba(11, 21, 53, 0.55);
+  --glass-bg-hover: rgba(15, 28, 69, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-border-hover: rgba(232, 25, 44, 0.25);
+}
+
+/* ===========================
+   RESET & BASE
+=========================== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font);
+  border: none;
+  outline: none;
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+/* ===========================
+   UTILITIES
+=========================== */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-size: clamp(26px, 3.5vw, 38px);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.section-subtitle {
+  font-size: 15px;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.accent-bar {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0 16px;
+}
+
+.accent-bar span {
+  display: block;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+.accent-bar span:first-child {
+  width: 40px;
+}
+
+.accent-bar span:last-child {
+  width: 24px;
+}
+
+section {
+  padding: 50px 0;
+  position: relative;
+  z-index: 1; /* Keep above interactive canvas */
+}
+
+/* Premium Shimmer & Glow Effects */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btn-shimmer:hover::after {
+  left: 125%;
+  opacity: 1;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 40%, #8b9bb4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-accent {
+  background: linear-gradient(135deg, #ffffff 30%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    400px circle at var(--mouse-x, 0px) var(--mouse-y, 0px),
+    rgba(232, 25, 44, 0.07) 0%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.glass-card:hover::before {
+  opacity: 1;
+}
+
+.glass-card:hover {
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border-hover);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(232, 25, 44, 0.05);
+}
+
+/* Ensure child content remains clickable and above glow hover */
+.glass-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ===========================
+   GRADIENT BACKGROUNDS
+=========================== */
+.bg-gradient-radial {
+  background: radial-gradient(ellipse at 70% 50%, rgba(20, 40, 140, 0.5) 0%, transparent 60%),
+              radial-gradient(ellipse at 20% 80%, rgba(232, 25, 44, 0.08) 0%, transparent 50%),
+              var(--bg-deep);
+}
+
+.wave-divider {
+  position: relative;
+}
+
+.wave-divider::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: inherit;
+  clip-path: ellipse(55% 100% at 50% 100%);
+  z-index: 1;
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px var(--accent-glow); }
+  50% { box-shadow: 0 0 40px var(--accent-glow), 0 0 80px rgba(232, 25, 44, 0.1); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+  section {
+    padding: 64px 0;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+}
