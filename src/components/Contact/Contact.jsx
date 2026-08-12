@@ -11,14 +11,17 @@ export default function Contact() {
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setStatus('sending');
-    // Simulate send (replace with EmailJS when configured)
+    const subject = form.subject ? form.subject : `Portfolio Inquiry from ${form.name}`;
+    const body = `Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`;
+    const mailtoUrl = `mailto:nithinkumars618@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoUrl;
     setTimeout(() => {
       setStatus('sent');
       setForm({ name: '', email: '', subject: '', message: '' });
-    }, 1500);
+    }, 1000);
   };
 
   const handleMouseMove = (e) => {
