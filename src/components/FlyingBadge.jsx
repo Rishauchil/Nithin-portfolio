@@ -138,7 +138,7 @@ export default function FlyingBadge() {
           display: 'block',
         }}
       >
-        4+
+        5+
       </span>
 
       <motion.span

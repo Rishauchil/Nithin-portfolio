@@ -67,7 +67,7 @@ export default function Hero() {
           >
             I'm <span className="hero__name text-gradient-accent">Nithin</span>, a Digital Marketing
             professional with{' '}
-            <span className="hero__highlight">4 years</span> of experience.
+            <span className="hero__highlight">5+ years</span> of experience.
           </motion.h1>
 
           <motion.div

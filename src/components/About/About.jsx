@@ -95,7 +95,7 @@ export default function About() {
               <h3 className="about__card-title">Professional Summary</h3>
             </div>
             <p className="about__text">
-              Digital Marketing Specialist with <strong>4 years of experience</strong> in
+              Digital Marketing Specialist with <strong>5+ years of experience</strong> in
               developing and executing multi-channel campaigns, analyzing performance, and
               creating engaging content. Proficient in digital marketing tools and software,
               along with graphic designing. Adept at leveraging the latest marketing trends
@@ -110,7 +110,7 @@ export default function About() {
                   className="about__stat-num"
                   style={{ opacity: 0, transition: 'opacity 0.2s ease', display: 'inline-block' }}
                 >
-                  4+
+                  5+
                 </span>
                 <span className="about__stat-label">Years Exp.</span>
               </div>
