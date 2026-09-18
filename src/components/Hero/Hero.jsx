@@ -154,7 +154,7 @@ export default function Hero() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                View My Work
+                Work Experience
               </motion.a>
             </Magnetic>
             <Magnetic>

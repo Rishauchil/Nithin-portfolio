@@ -76,10 +76,10 @@ const educationData = [
     id: 'edu-puc',
     type: 'edu',
     name: 'Pre-University Course',
-    issuer: 'Mahesh College of Management',
+    issuer: 'SM Kushe PU College',
     shortBadge: 'PUC',
     badgeColor: '#8b5cf6',
-    year: '2018 · Mangalore, India',
+    year: '2016 · Mangalore, India',
     accentColor: '#8b5cf6'
   },
 ];
