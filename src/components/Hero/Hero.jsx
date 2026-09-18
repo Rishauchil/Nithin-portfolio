@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaWhatsapp, FaEnvelope, FaBehance, FaLinkedinIn } from 'react-icons/fa';
+import { FaWhatsapp, FaEnvelope, FaDownload } from 'react-icons/fa';
 import nithinImg from '../../assets/nithin-profile.jpeg';
 import Magnetic from '../Magnetic';
 import './Hero.css';
@@ -155,6 +155,19 @@ export default function Hero() {
                 whileTap={{ scale: 0.95 }}
               >
                 View My Work
+              </motion.a>
+            </Magnetic>
+            <Magnetic>
+              <motion.a 
+                href="/Nithin_Kumar_Resume.pdf"
+                download="Nithin_Kumar_Resume.pdf"
+                className="btn btn--download btn-shimmer" 
+                id="hero-cta-resume"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FaDownload style={{ marginRight: '8px', fontSize: '13px' }} />
+                Download CV
               </motion.a>
             </Magnetic>
           </motion.div>

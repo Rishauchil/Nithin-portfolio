@@ -32,6 +32,7 @@ export default function Footer() {
         </div>
 
         <div className="footer__socials">
+          {/* LinkedIn – commented out
           <a
             href="https://www.linkedin.com/in/hellonickdigital"
             target="_blank"
@@ -42,6 +43,7 @@ export default function Footer() {
           >
             <FaLinkedinIn />
           </a>
+          */}
         </div>
       </div>
 

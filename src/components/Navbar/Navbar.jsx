@@ -73,6 +73,7 @@ export default function Navbar() {
         </ul>
 
         <div className="navbar__socials">
+          {/* LinkedIn – commented out
           <Magnetic>
             <motion.a
               href="https://www.linkedin.com/in/hellonickdigital"
@@ -87,6 +88,7 @@ export default function Navbar() {
               <FaLinkedinIn />
             </motion.a>
           </Magnetic>
+          */}
         </div>
 
         <button

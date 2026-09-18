@@ -106,11 +106,6 @@ export default function Contact() {
                   </div>
                 </motion.div>
               </div>
-
-              <div className="contact__availability">
-                <span className="contact__avail-dot" />
-                <span>Available for freelance &amp; full-time opportunities</span>
-              </div>
             </div>
           </motion.div>
 

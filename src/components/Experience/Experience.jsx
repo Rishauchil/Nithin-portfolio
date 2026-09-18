@@ -28,7 +28,7 @@ const experiences = [
   },
   {
     id: 'exp-2',
-    company: 'Rezin Info Soft Private Ltd',
+    company: 'Rezin Infosoft Private Limited',
     role: 'Digital Marketing Executive',
     period: 'June 2022 – October 2023',
     location: 'India',
