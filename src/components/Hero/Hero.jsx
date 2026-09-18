@@ -65,9 +65,8 @@ export default function Hero() {
             animate="visible"
             custom={0.2}
           >
-            I'm <span className="hero__name text-gradient-accent">Nithin</span>, a Digital Marketing
-            professional with{' '}
-            <span className="hero__highlight">5+ years</span> of experience.
+            I'm <span className="hero__name text-gradient-accent">Nithin Kumar</span>, a Digital Marketing Professional with{' '}
+            <span className="hero__highlight">5 years</span> of experience in developing and executing impactful digital marketing strategies.
           </motion.h1>
 
           <motion.div
